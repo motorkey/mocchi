@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'sessions#destroy'
     root to: 'pages#home'
   end
+  namespace :admin do
+    resources :users, only: [:index, :show]
+    root to: 'users#index'
+  end
 end

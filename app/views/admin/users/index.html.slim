@@ -1,0 +1,13 @@
+h1 ユーザーの一覧
+table.table.table-hover
+  thead
+    tr
+      th ユーザー名
+      th メールアドレス
+  tbody
+    - @users.each do |user|
+      tr
+        th
+          = link_to admin_user_path(user.id)
+            = user.name
+        th = user.email
