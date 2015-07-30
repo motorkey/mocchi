@@ -1,0 +1,18 @@
+# Ignore bundler config.
+/.bundle
+vendor/bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/log/*.log
+!/log/.keep
+/tmp
+
+doc/
+*.swp
+*~
+
+.project
+.DS_Store
+.idea
+.secret

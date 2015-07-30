@@ -1,0 +1,12 @@
+h1 Sign in
+.row
+  .span6.offset3
+    = form_for :session, url: sessions_path do |f|
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: 'form-control'
+      .form-group
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+      = f.submit 'ログイン', class: 'btn btn-primary'
+    = link_to '新規登録', sign_up_path
