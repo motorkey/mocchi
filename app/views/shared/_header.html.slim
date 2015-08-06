@@ -1,0 +1,9 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      = link_to 'Mocchi', root_path, class: 'navbar-brand'
+    ul.nav.navbar-nav.navbar-right
+      - if session[:user_id]
+        li = link_to 'ログアウト', sign_out_path, method: :delete
+      - else
+        li = link_to 'ログイン', sign_in_path

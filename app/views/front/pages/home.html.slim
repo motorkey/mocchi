@@ -1,1 +1,5 @@
 h1 = @user.name
+.form-group
+  = link_to '勉強を始める', user_logs_path(@user.id, :'start-end' => 'start'), method: :post, class: 'btn btn-default', :'data-start-end' => 'start'
+.form-group
+  = link_to '勉強を終わる', user_logs_path(@user.id, :'start-end' => 'end'), method: :post, class: 'btn btn-default', :'data-start-end' => 'end'

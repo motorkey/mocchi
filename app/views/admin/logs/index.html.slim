@@ -1,0 +1,11 @@
+h1 勉強ログ
+table.table
+  thead
+    tr
+      th Start or End
+      th Time
+  tbody
+    - @logs.each do |log|
+      tr
+        th = log.start_end
+        th = log.time

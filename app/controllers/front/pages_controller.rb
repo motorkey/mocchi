@@ -1,4 +1,4 @@
-class Front::PagesController < ApplicationController
+class Front::PagesController < FrontController
   def home
     if session[:user_id]
       @user = User.find(session[:user_id])

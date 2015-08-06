@@ -1,4 +1,4 @@
-class Front::SessionsController < ApplicationController
+class Front::SessionsController < FrontController
   def new
   end
 
@@ -14,5 +14,7 @@ class Front::SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+    redirect_to root_path
   end
 end
